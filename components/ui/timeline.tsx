@@ -111,8 +111,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                                     {/* Timeline dot - positioned consistently */}
                                     <div
                                         className={`absolute left-0 top-2 w-10 h-10 rounded-full border-4 transition-all duration-700 ease-out z-10 ${isActive
-                                                ? 'bg-blue-500 border-blue-400 scale-110 shadow-lg shadow-blue-500/50'
-                                                : 'bg-gray-700 border-gray-600'
+                                            ? 'bg-blue-500 border-blue-400 scale-110 shadow-lg shadow-blue-500/50'
+                                            : 'bg-gray-700 border-gray-600'
                                             }`}
                                     >
                                         <div className={`absolute inset-2 rounded-full transition-all duration-700 ${isActive ? 'bg-white' : 'bg-transparent'
@@ -219,7 +219,7 @@ const timelineData = [
                             <div className="w-3 h-3 bg-blue-400 rounded-full mt-2 flex-shrink-0 shadow-sm shadow-blue-400/50"></div>
                             <div>
                                 <h4 className="font-bold text-white text-lg mb-2">Customized Strategies</h4>
-                                <p className="text-gray-300 leading-relaxed">A personalized acquisition plan identifying how you'll create and grow your cash-flowing asset.</p>
+                                <p className="text-gray-300 leading-relaxed">A personalized acquisition plan identifying how you&apos;ll create and grow your cash-flowing asset.</p>
                             </div>
                         </div>
                     </div>

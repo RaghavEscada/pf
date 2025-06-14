@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Star, Users, Globe, MessageCircle, Search, Network } from 'lucide-react';
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 const logos = [
   {
@@ -48,7 +49,7 @@ const LogoCloud = () => {
                 className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6"
               >
                 {logos.map((logo, key) => (
-                  <img
+                  <Image
                     key={key}
                     src={logo.url}
                     width={112}
@@ -551,7 +552,13 @@ const Hero = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="text-black text-center font-bold text-2xl">
-                    <img src="/pflogod.webp" alt="Pocket Fund" className="w-full h-full object-contain" />
+                    <Image
+                      src="/pflogod.webp"
+                      alt="Pocket Fund"
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   {/* Enhanced pulsing border effect */}
                   <motion.div
@@ -751,4 +758,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

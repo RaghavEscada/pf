@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Target, TrendingUp, Users, CheckCircle, Zap, DollarSign, Calendar, Award, Star, Globe, Briefcase } from 'lucide-react';
+import Image from 'next/image';
 
 const About = () => {
   const acquisitions = [
@@ -227,28 +228,47 @@ const About = () => {
         </div>
 
         {/* Hero Section */}
-
-        <div className="max-w-8xl mx-auto text-center">
-          <div className="inline-flex items-center bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-full px-8 py-4 mb-12 shadow-2xl">
-            <Award className="w-6 h-6 text-blue-400 mr-3" />
-            <span className="text-sm font-medium text-gray-300 tracking-wide">First-of-its-kind Micro Private Equity Firm</span>
+        <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/hero-bg.jpg"
+              alt="Hero Background"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+              quality={90}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />
           </div>
 
+          <div className="max-w-8xl mx-auto text-center">
+            <div className="inline-flex items-center bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-full px-8 py-4 mb-12 shadow-2xl">
+              <Award className="w-6 h-6 text-blue-400 mr-3" />
+              <span className="text-sm font-medium text-gray-300 tracking-wide">First-of-its-kind Micro Private Equity Firm</span>
+            </div>
 
-
-          <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16">
-            We're on a mission to{' '}
-            <span className="text-white font-semibold">democratize online business acquisitions</span>{' '}
-            and empower a new generation of digital entrepreneurs through hands-on ownership, transparency, and operational excellence.
-          </p>
-
-          {/* Hero Stats */}
-
+            <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16">
+              We&apos;re on a mission to{' '}
+              <span className="text-white font-semibold">democratize online business acquisitions</span>{' '}
+              and empower a new generation of digital entrepreneurs through hands-on ownership, transparency, and operational excellence.
+            </p>
+          </div>
         </div>
 
-
         {/* Company Snapshot */}
-        <div className="py-20 px-6 md:px-12 lg:px-16 xl:px-24">
+        <div className="relative w-full py-20 px-6 md:px-12 lg:px-16 xl:px-24">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/pattern-bg.jpg"
+              alt="Pattern Background"
+              fill
+              className="object-cover opacity-10"
+              sizes="100vw"
+              quality={75}
+            />
+          </div>
+
           <div className="max-w-8xl mx-auto">
             <div className="text-center mb-20">
               <div className="inline-flex items-center bg-blue-500/10 backdrop-blur-sm border border-blue-500/30 rounded-full px-8 py-4 mb-12">
@@ -311,7 +331,7 @@ const About = () => {
                       <div className="h-1 w-12 bg-blue-500 rounded-full"></div>
                     </div>
                   </div>
-                  <p className="text-gray-300 text-lg">Transition support & exit planning</p>
+                  <p className="text-gray-300 text-lg">Transition support &amp; exit planning</p>
                 </div>
               </div>
             </div>
@@ -319,7 +339,6 @@ const About = () => {
         </div>
 
         {/* Mission & Vision */}
-        {/* Mission & Vision - Redesigned Layout */}
         <div className="w-full px-6 md:px-12 lg:px-16 xl:px-24 mb-40">
           <div className="max-w-8xl mx-auto">
             <div className="text-center mb-24">
@@ -328,7 +347,7 @@ const About = () => {
                 <span className="text-sm font-semibold text-blue-400 tracking-wide">OUR FOUNDATION</span>
               </div>
               <h2 className="text-5xl md:text-6xl font-bold mb-8 text-white animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
-                Mission & <span className="text-blue-400">Vision</span>
+                Mission &amp; <span className="text-blue-400">Vision</span>
               </h2>
               <p className="text-gray-400 text-xl max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out_0.4s_both]">
                 What drives us forward and where we&apos;re headed
@@ -449,7 +468,7 @@ const About = () => {
                 What We <span className="text-blue-400">Do</span>
               </h2>
               <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-                Our comprehensive approach to micro acquisitions
+                We&apos;re not just investors, we&apos;re builders
               </p>
             </div>
 
@@ -487,7 +506,7 @@ const About = () => {
                 </p>
 
                 <p>
-                  We don't just acquire companies—we turn them into <span className="text-blue-400 font-medium">case studies for entrepreneurship through acquisition</span>, applying systems, automation, and operational cleanups to unlock hidden value through content marketing and AI workflows.
+                  We don&apos;t just acquire companies—we turn them into <span className="text-blue-400 font-medium">case studies for entrepreneurship through acquisition</span>, applying systems, automation, and operational cleanups to unlock hidden value through content marketing and AI workflows.
                 </p>
               </div>
 
@@ -586,10 +605,12 @@ const About = () => {
                   <div className="flex items-center justify-between mb-6 relative z-10">
                     <div className="flex items-center space-x-4">
                       <div className="w-16 h-16 bg-gray-800/50 rounded-xl flex items-center justify-center border border-gray-700/50 overflow-hidden hover:scale-105 transition-transform duration-300">
-                        <img
+                        <Image
                           src={acquisition.logoImage}
                           alt={`${acquisition.name} logo`}
-                          className="w-14 h-14 object-contain p-1"
+                          width={56}
+                          height={56}
+                          className="object-contain p-1"
                         />
                       </div>
                     </div>
@@ -664,8 +685,8 @@ const About = () => {
                     <h3 className="text-3xl font-bold text-white">Want to See Your Business Here?</h3>
                   </div>
                   <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
-                    We're actively seeking undervalued digital assets for our next acquisition cycle.
-                    Join our portfolio of successful businesses and unlock your company's potential.
+                    We&apos;re actively seeking undervalued digital assets for our next acquisition cycle.
+                    Join our portfolio of successful businesses and unlock your company&apos;s potential.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button className="bg-green-500/20 text-green-400 px-8 py-4 rounded-full font-semibold border border-green-500/30 hover:bg-green-500/30 hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -799,7 +820,7 @@ const About = () => {
                 </h3>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
                   Join us in democratizing business acquisitions and building the future of micro private equity.
-                  Whether you're a founder looking to exit or an investor seeking opportunities, we're here to help.
+                  Whether you&apos;re a founder looking to exit or an investor seeking opportunities, we&apos;re here to help.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
