@@ -568,7 +568,7 @@ const Hero = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16">
-                We're on a mission to{' '}
+                We&#39;re on a mission to{' '}
                 <span className="text-white font-semibold">democratize online business acquisitions</span>{' '}
                 and empower a new generation of digital entrepreneurs through hands-on ownership, transparency, and operational excellence.
               </p>
