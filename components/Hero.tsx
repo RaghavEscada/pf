@@ -484,7 +484,7 @@ const Hero = () => {
                 <div className="w-32 h-32 bg-white rounded-2xl flex items-center justify-center shadow-lg relative hover:scale-110 hover:shadow-2xl transition-all duration-500 group">
                   <div className="text-black text-center font-bold text-2xl">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">PF</span>
+                      <img src="/pflogod.webp" alt="Logo" />
                     </div>
                   </div>
                   {/* Enhanced pulsing border effect */}
