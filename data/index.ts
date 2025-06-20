@@ -1,7 +1,8 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Process", link: "#process" },
+  { name: "Business Interests", link: "#business" },
+    { name: "Testimonial", link: "#testimonial" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -214,3 +215,5 @@ export const socialMedia = [
     img: "/link.svg",
   },
 ];
+
+
