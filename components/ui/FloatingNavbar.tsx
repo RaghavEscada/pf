@@ -75,32 +75,38 @@ export const FloatingNav = ({
         >
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center w-full max-w-7xl mx-auto px-6 gap-4">
-            {/* Logo in Left Corner */}
-            {logo && (
-              <Link
-                href={logo.link || "/"}
-                className="flex items-center justify-center w-32 h-12 rounded-xl border border-white/10 shadow-lg backdrop-blur-md bg-black/80 hover:bg-white/5 transition-all duration-200 flex-shrink-0"
-              >
-                {logo.src && (
-                  <Image
-                    src={logo.src}
-                    alt="Logo"
-                    width={32}
-                    height={32}
-                    className="h-8 w-8"
-                  />
-                )}
-                {logo.text && (
-                  <span className="text-white font-semibold text-lg">
-                    {logo.text}
+            {/* Left Navigation Items */}
+            <div className="flex items-center gap-4">
+              {navItems.slice(0, Math.floor(navItems.length / 2)).map((navItem: any, idx: number) => (
+                <Link
+                  key={idx}
+                  href={navItem.link}
+                  className="relative text-neutral-300 hover:text-white items-center flex justify-center w-32 h-12 rounded-xl border border-white/10 shadow-lg backdrop-blur-md bg-black/80 transition-all duration-200 hover:bg-white/10"
+                >
+                  <span className="text-sm font-medium">
+                    {navItem.name}
                   </span>
-                )}
-              </Link>
-            )}
+                </Link>
+              ))}
+            </div>
 
-            {/* Navigation Items - Each in uniform long box */}
-            <div className="flex items-center gap-4 flex-1 justify-center">
-              {navItems.map((navItem: any, idx: number) => (
+            {/* Center Logo */}
+            <Link
+              href="/"
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-white/10 shadow-lg backdrop-blur-md bg-black/80 hover:bg-white/5 transition-all duration-200 flex-shrink-0 hover:scale-105"
+            >
+              <Image
+                src="/pflogod.webp"
+                alt="Pocket Fund Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
+            </Link>
+
+            {/* Right Navigation Items */}
+            <div className="flex items-center gap-4">
+              {navItems.slice(Math.floor(navItems.length / 2)).map((navItem: any, idx: number) => (
                 <Link
                   key={idx}
                   href={navItem.link}

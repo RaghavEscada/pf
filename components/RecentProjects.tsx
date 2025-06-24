@@ -3,43 +3,58 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const TrackRecord = () => {
-  const pricingPlans = [
+  const trackRecordData = [
     {
-      name: "Basic",
-      monthlyRetainer: "$2,500",
-      analysts: 1,
-      dealsPerMonth: 8,
-      successFee: "3% (< $650K), 1.5% (>$650K)",
+      metric: "First Deal Success",
+      value: "$4K → $130K",
+      subtitle: "Sourcely AI in 15 months",
       colors: [[34, 197, 94], [22, 163, 74]],
       containerColor: "bg-emerald-900",
-      icon: "🌱",
-      popular: false
+      icon: "💎"
     },
     {
-      name: "Premium",
-      monthlyRetainer: "$5,000",
-      analysts: 3,
-      dealsPerMonth: 20,
-      successFee: "Same",
+      metric: "Total Acquisitions",
+      value: "7 Deals",
+      subtitle: "Successfully closed",
       colors: [[236, 72, 153], [219, 39, 119]],
       containerColor: "bg-pink-900",
-      icon: "⭐",
-      popular: true
+      icon: "🎯"
     },
     {
-      name: "Serial Acquirer",
-      monthlyRetainer: "$10,000",
-      analysts: 6,
-      dealsPerMonth: 50,
-      successFee: "Same",
+      metric: "Value Created",
+      value: "$224K+",
+      subtitle: "From $4K invested",
       colors: [[14, 165, 233], [59, 130, 246]],
       containerColor: "bg-sky-600",
-      icon: "🚀",
-      popular: false
+      icon: "📈"
+    },
+    {
+      metric: "2025 Goal",
+      value: "$250K",
+      subtitle: "Service revenue target",
+      colors: [[168, 85, 247], [147, 51, 234]],
+      containerColor: "bg-purple-900",
+      icon: "🚀"
+    },
+    {
+      metric: "Team Setup",
+      value: "Global",
+      subtitle: "Mumbai + remote ops",
+      colors: [[249, 115, 22], [234, 88, 12]],
+      containerColor: "bg-orange-900",
+      icon: "🌍"
+    },
+    {
+      metric: "Key Edge",
+      value: "Off-Market",
+      subtitle: "India-based operations",
+      colors: [[99, 102, 241], [79, 70, 229]],
+      containerColor: "bg-indigo-900",
+      icon: "⚡"
     }
   ];
 
-  const aboutPocketFund = [
+  const whyPocketFund = [
     {
       title: "Unmatched Deal Flow",
       description: "under $2M, especially <$100K",
@@ -74,81 +89,6 @@ const TrackRecord = () => {
       icon: "📺",
       colors: [[249, 115, 22], [234, 88, 12]],
       containerColor: "bg-orange-900"
-    }
-  ];
-
-  const processSteps = [
-    {
-      title: "Deal Sourcing",
-      description: "We leverage our extensive network and proprietary tools to find the best opportunities",
-      icon: "🔍",
-      step: 1
-    },
-    {
-      title: "Due Diligence",
-      description: "Thorough analysis of financials, operations, and market potential",
-      icon: "📊",
-      step: 2
-    },
-    {
-      title: "Negotiation",
-      description: "Expert handling of deal terms and structuring for optimal outcomes",
-      icon: "🤝",
-      step: 3
-    },
-    {
-      title: "Closing",
-      description: "Seamless transition and handover process to ensure business continuity",
-      icon: "🎯",
-      step: 4
-    }
-  ];
-
-  const businessTypes = [
-    {
-      title: "SaaS Businesses",
-      description: "Recurring revenue models with strong growth potential",
-      icon: "💻",
-      metrics: ["ARR: $10K-$2M", "Growth: 20%+ YoY", "Margin: 70%+"]
-    },
-    {
-      title: "E-commerce",
-      description: "Established brands with loyal customer base",
-      icon: "🛍️",
-      metrics: ["Revenue: $50K-$1M", "Growth: 15%+ YoY", "Margin: 30%+"]
-    },
-    {
-      title: "Content Sites",
-      description: "Monetized through ads, affiliates, or subscriptions",
-      icon: "📝",
-      metrics: ["Revenue: $5K-$500K", "Growth: 10%+ MoM", "Margin: 80%+"]
-    },
-    {
-      title: "Marketplaces",
-      description: "Platforms connecting buyers and sellers",
-      icon: "🏪",
-      metrics: ["GMV: $100K-$5M", "Growth: 25%+ YoY", "Margin: 20%+"]
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Pocket Fund helped me acquire my first business. Their expertise and guidance were invaluable.",
-      author: "John Smith",
-      role: "First-time Acquirer",
-      image: "/testimonial1.jpg"
-    },
-    {
-      quote: "The deal flow quality is unmatched. We've closed multiple acquisitions through their platform.",
-      author: "Sarah Johnson",
-      role: "Serial Acquirer",
-      image: "/testimonial2.jpg"
-    },
-    {
-      quote: "Their India-based team provides exceptional value at a fraction of the cost.",
-      author: "Michael Chen",
-      role: "Portfolio Manager",
-      image: "/testimonial3.jpg"
     }
   ];
 
@@ -291,12 +231,31 @@ const TrackRecord = () => {
 
   return (
     <div className="min-h-screen w-full bg-slate-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Enhanced Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-40 right-20 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-blue-400/15 rounded-full blur-2xl"></div>
+        {/* Main gradient orbs */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-40 right-20 w-80 h-80 bg-purple-500/15 rounded-full blur-3xl animate-pulse-slower"></div>
+        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-blue-400/15 rounded-full blur-2xl animate-float"></div>
+        <div className="absolute top-1/2 right-10 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+
+        {/* Additional ambient lights */}
+        <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-emerald-500/10 rounded-full blur-2xl animate-float-delayed"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-56 h-56 bg-pink-500/10 rounded-full blur-2xl animate-pulse-slower"></div>
       </div>
+
+      {/* Enhanced grid pattern */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+          maskImage: 'radial-gradient(ellipse 100% 60% at 50% 0%, #000 40%, transparent 100%)'
+        }}
+      ></div>
 
       <div className="relative z-10">
         {/* Hero Section */}
@@ -308,17 +267,129 @@ const TrackRecord = () => {
             className="max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-purple-500/20 border border-purple-500/30 mb-8">
-              <span className="text-purple-300 font-semibold">Pocket Fund</span>
+              <span className="text-purple-300 font-semibold">Pocket Fund Performance Dashboard</span>
             </div>
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
-              Your Partner in Business Acquisition
+              Track Record
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
-              From sourcing to closing, we make business acquisition simple and successful.
+              From $4K to $224K+ in value creation. See how we&apos;re revolutionizing micro-acquisitions with our proven track record and global operations.
             </p>
           </motion.div>
         </div>
+
+     
+
+        {/* Customer Avatars Section */}
+        <Section title="Who We Serve" subtitle="Four distinct customer segments, each with unique needs and solutions">
+          <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            {customerAvatars.map((avatar, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <AvatarCard avatar={avatar} />
+              </motion.div>
+            ))}
+          </div>
+        </Section>
+
+        {/* Risks & Mitigation Section */}
+        <Section title="Risk Management" subtitle="Transparent about challenges and how we address them">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {risksData.map((risk, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <RiskCard risk={risk} />
+              </motion.div>
+            ))}
+          </div>
+        </Section>
+
+        {/* 2025 Goals Section */}
+        <Section title="2025 Vision" subtitle="Ambitious targets driving our growth and your success">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {goals2025.map((goal, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <GoalCard goal={goal} index={index} />
+              </motion.div>
+            ))}
+          </div>
+        </Section>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="py-20 px-4 text-center"
+        >
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Scale Your Acquisitions?</h2>
+            <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+              Join the entrepreneurs and funds who&apos;ve already discovered the Pocket Fund advantage.
+              Let&apos;s discuss how we can accelerate your acquisition strategy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="#contact" className="inline-block bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 text-center">
+                Start Your First Deal
+              </a>
+              <a href="#contact" className="inline-block border border-purple-500/50 hover:border-purple-500 text-purple-300 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 backdrop-blur-sm text-center">
+                View Case Studies
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
+
+      <style jsx>{`
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        
+        @keyframes pulse-slower {
+          0%, 100% { opacity: 0.2; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(1.08); }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+        .animate-pulse-slower { animation: pulse-slower 6s ease-in-out infinite; }
+        .animate-float { animation: float 8s ease-in-out infinite; }
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+        
+        .animate-shimmer {
+          animation: shimmer 2s infinite;
+        }
+      `}</style>
     </div>
   );
 };
@@ -394,84 +465,6 @@ const MetricCard = ({ data }: { data: any }) => {
     </div>
   );
 };
-
-const PricingCard = ({ plan }: { plan: any }) => {
-  return (
-    <div className={`relative border-2 rounded-3xl overflow-hidden backdrop-blur-sm transition-all duration-700 hover:scale-105 ${plan.popular ? 'border-purple-400/60 shadow-purple-500/30 shadow-2xl bg-gradient-to-b from-purple-900/40 to-slate-900/60' : 'border-white/20 hover:border-purple-500/40 bg-gradient-to-b from-slate-800/50 to-slate-900/50'}`}>
-
-      {/* Enhanced popular badge */}
-      {plan.popular && (
-        <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-500 text-white text-center py-4 font-bold text-lg relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
-          <span className="relative flex items-center justify-center">
-            <span className="text-2xl mr-2">👑</span>
-            Most Popular Choice
-          </span>
-        </div>
-      )}
-
-      <div className={`relative p-8 ${plan.popular ? 'pt-20' : 'pt-8'}`}>
-        {/* Header with enhanced styling */}
-        <div className="text-center mb-10">
-          <div className={`text-6xl mb-6 transition-transform duration-300 hover:scale-110 ${plan.popular ? 'animate-pulse-slow' : ''}`}>{plan.icon}</div>
-          <h3 className={`text-3xl font-bold mb-4 ${plan.popular ? 'text-purple-200' : 'text-white'}`}>{plan.name}</h3>
-          <div className={`text-5xl font-bold mb-3 ${plan.popular ? 'text-purple-300' : 'text-purple-400'}`}>{plan.monthlyRetainer}</div>
-          <p className="text-gray-400 text-lg">monthly retainer</p>
-          {plan.popular && (
-            <div className="mt-4 inline-block px-4 py-2 rounded-full bg-purple-500/30 border border-purple-400/50">
-              <span className="text-purple-200 font-semibold">⚡ Best Value</span>
-            </div>
-          )}
-        </div>
-
-        {/* Enhanced features section */}
-        <div className="space-y-6 mb-10">
-          <PricingFeature label="Dedicated Analysts" value={plan.analysts} highlight={plan.popular} />
-          <PricingFeature label="Deals per Month" value={plan.dealsPerMonth} highlight={plan.popular} />
-          <PricingFeature label="Success Fee" value={plan.successFee} highlight={plan.popular} />
-        </div>
-
-        {/* Enhanced CTA button */}
-        <a href="#contact" className={`w-full py-5 rounded-xl font-bold text-xl transition-all duration-300 transform hover:scale-105 text-center block relative overflow-hidden ${plan.popular
-          ? 'bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white shadow-lg hover:shadow-purple-500/30'
-          : 'bg-white/10 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-purple-600/20 text-white border border-purple-500/30 hover:border-purple-400'
-          }`}>
-          {plan.popular && (
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
-          )}
-          <span className="relative">
-            {plan.popular ? '🚀 Get Started Now' : 'Choose Plan'}
-          </span>
-        </a>
-
-        {/* Enhanced guarantees */}
-        <div className="mt-8 text-center text-sm space-y-2">
-          <div className="flex items-center justify-center space-x-6">
-            <div className="flex items-center">
-              <span className="text-green-400 mr-2">✓</span>
-              <span className="text-gray-300">30-day guarantee</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-blue-400 mr-2">✓</span>
-              <span className="text-gray-300">Cancel anytime</span>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            <span className="text-purple-400 mr-2">✓</span>
-            <span className="text-gray-300">Dedicated support included</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const PricingFeature = ({ label, value, highlight }: { label: string; value: any; highlight?: boolean }) => (
-  <div className={`flex items-center justify-between border-b pb-4 transition-colors duration-300 ${highlight ? 'border-purple-400/30' : 'border-white/10'}`}>
-    <span className={`${highlight ? 'text-purple-200' : 'text-gray-300'}`}>{label}</span>
-    <span className={`font-bold text-xl ${highlight ? 'text-purple-300' : 'text-white'}`}>{value}</span>
-  </div>
-);
 
 const AvatarCard = ({ avatar }: { avatar: any }) => {
   const [hovered, setHovered] = React.useState(false);

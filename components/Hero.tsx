@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight, Target, TrendingUp, Users, Award, Briefcase, Play, DollarSign } from "lucide-react";
+import Image from "next/image";
+import LottiePlayer from "./ui/LottiePlayer";
 
 // Enhanced Mouse Position Hook
 interface MousePosition {
@@ -378,187 +380,14 @@ const Hero = () => {
             </p>
           </AnimatedDiv>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center relative max-w-7xl mx-auto">
-            {/* Enhanced Connection Lines Animation */}
-            <div className="hidden lg:block absolute inset-0 pointer-events-none z-10">
-              <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.4" />
-                    <stop offset="50%" stopColor="#3b82f6" stopOpacity="1" />
-                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.4" />
-                  </linearGradient>
-                </defs>
-
-                {/* Moving dotted lines */}
-                <path d="M 25 38 L 50 50" stroke="url(#lineGradient)" strokeWidth="0.5" fill="none" opacity="1" strokeDasharray="1,1">
-                  <animate attributeName="stroke-dashoffset" values="2;0" dur="1.5s" repeatCount="indefinite" />
-                </path>
-                <path d="M 25 45 L 50 50" stroke="url(#lineGradient)" strokeWidth="0.5" fill="none" opacity="1" strokeDasharray="1,1">
-                  <animate attributeName="stroke-dashoffset" values="2;0" dur="1.5s" repeatCount="indefinite" begin="0.2s" />
-                </path>
-                <path d="M 25 55 L 50 50" stroke="url(#lineGradient)" strokeWidth="0.5" fill="none" opacity="1" strokeDasharray="1,1">
-                  <animate attributeName="stroke-dashoffset" values="2;0" dur="1.5s" repeatCount="indefinite" begin="0.4s" />
-                </path>
-                <path d="M 25 62 L 50 50" stroke="url(#lineGradient)" strokeWidth="0.5" fill="none" opacity="1" strokeDasharray="1,1">
-                  <animate attributeName="stroke-dashoffset" values="2;0" dur="1.5s" repeatCount="indefinite" begin="0.6s" />
-                </path>
-                <path d="M 50 50 L 75 50" stroke="#3b82f6" strokeWidth="0.5" fill="none" opacity="1" strokeDasharray="1,1">
-                  <animate attributeName="stroke-dashoffset" values="2;0" dur="1.5s" repeatCount="indefinite" begin="0.8s" />
-                </path>
-
-                {/* Enhanced Pocket Fund center point */}
-                <circle cx="50" cy="50" r="2" fill="#6366f1" opacity="0.8">
-                  <animate attributeName="r" values="1.5;3;1.5" dur="2.5s" repeatCount="indefinite" />
-                  <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="50" cy="50" r="1" fill="#a78bfa" opacity="1">
-                  <animate attributeName="r" values="0.8;1.5;0.8" dur="2s" repeatCount="indefinite" />
-                </circle>
-              </svg>
-            </div>
-
-            {/* Deal Sources - Left Side */}
-            <AnimatedDiv
-              className="bg-gray-900 border border-gray-800 rounded-2xl p-10 hover:border-blue-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/10 group relative z-10 hover:scale-102"
-              delay={200}
-              from="opacity-0 -translate-x-12"
-              to="opacity-100 translate-x-0"
-            >
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center hover:scale-110 hover:rotate-1 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM9 17H7V10H9V17ZM13 17H11V7H13V17ZM17 17H15V13H17V17Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">Deal Sources</h3>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-green-400 text-sm font-medium">Active</span>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-400 mb-8 leading-relaxed text-base">
-                Multi-channel approach to discover quality businesses through diverse networks and outreach
-              </p>
-
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                {[
-                  { name: "Social Media", gradient: "from-blue-500 to-purple-500" },
-                  { name: "Community", gradient: "from-green-500 to-teal-500" },
-                  { name: "Outreach", gradient: "from-orange-500 to-red-500" },
-                  { name: "Network", gradient: "from-indigo-500 to-purple-600" }
-                ].map((item, index) => (
-                  <div
-                    key={item.name}
-                    className="flex flex-col items-center space-y-2 hover:scale-105 hover:-translate-y-1 transition-transform duration-200"
-                  >
-                    <div className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center hover:shadow-lg transition-all duration-300`}>
-                      <div className="w-6 h-6 bg-white rounded opacity-80"></div>
-                    </div>
-                    <span className="text-white text-xs font-medium text-center">{item.name}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="bg-white rounded-xl px-4 py-3 flex items-center justify-center space-x-3">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <span className="text-gray-900 font-medium text-sm">Ready for Acquisition</span>
-              </div>
-            </AnimatedDiv>
-
-            {/* Center - Enhanced Pocket Fund Logo */}
-            <AnimatedDiv
-              className="flex flex-col items-center py-24 justify-center space-y-12 relative z-20"
-              delay={400}
-              from="opacity-0 scale-75"
-              to="opacity-100 scale-100"
-            >
-              <div className="relative mt-8">
-                <div className="w-32 h-32 bg-white rounded-2xl flex items-center justify-center shadow-lg relative hover:scale-110 hover:shadow-2xl transition-all duration-500 group">
-                  <div className="text-black text-center font-bold text-2xl">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                      <img src="/pflogod.webp" alt="Logo" />
-                    </div>
-                  </div>
-                  {/* Enhanced pulsing border effect */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-blue-400 opacity-0 scale-100 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500" />
-                </div>
-
-                {/* Enhanced multiple glowing rings */}
-                <div className="absolute -top-8 -left-8 w-40 h-40 bg-blue-400/20 rounded-full blur-xl animate-pulse"></div>
-                <div className="absolute -top-4 -left-4 w-32 h-32 bg-white/10 rounded-full blur-lg" style={{ animation: "pulse 2s ease-in-out infinite 0.5s" }}></div>
-                <div className="absolute -top-12 -left-12 w-48 h-48 bg-purple-400/10 rounded-full blur-2xl" style={{ animation: "pulse 4s ease-in-out infinite 1s" }}></div>
-              </div>
-
-              {/* Enhanced connection indicator */}
-              <div className="text-center">
-                <div className="flex items-center justify-center space-x-1">
-                  {[0, 100, 200].map((delay, index) => (
-                    <div
-                      key={index}
-                      className="w-2 h-2 bg-blue-400 rounded-full"
-                      style={{
-                        animation: `bounce 1.5s ease-in-out infinite ${delay}ms`
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-            </AnimatedDiv>
-
-            {/* Buyers - Right Side */}
-            <AnimatedDiv
-              className="bg-gray-900 border border-gray-800 rounded-2xl p-10 hover:border-orange-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-orange-500/10 group relative z-10 hover:scale-102"
-              delay={600}
-              from="opacity-0 translate-x-12"
-              to="opacity-100 translate-x-0"
-            >
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center hover:scale-110 hover:-rotate-1 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 6.5V7.5C15 8.3 14.3 9 13.5 9S12 8.3 12 7.5V6.5L9 7V9C9 10.1 8.1 11 7 11S5 10.1 5 9V7.5L3 8V10C3 11.1 3.9 12 5 12H19C20.1 12 21 11.1 21 10V9Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">Buyers</h3>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-green-400 text-sm font-medium">Verified</span>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-gray-400 mb-8 leading-relaxed text-base">
-                Define your criteria and create mandates to discover the right companies to acquire
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="flex justify-between">
-                  <span className="text-gray-300">SaaS</span>
-                  <span className="text-gray-300">E-commerce</span>
-                </div>
-                <div className="text-gray-300">Revenue: $10K - $100K ARR</div>
-                <div className="text-gray-300">Growth Rate: 20%+ YoY</div>
-                <div className="text-gray-300">EBITDA: Profitable Preferred</div>
-              </div>
-
-              <div className="bg-gray-800 border border-gray-700 rounded-xl px-4 py-3 text-center hover:border-orange-500/30 hover:bg-gray-800/80 hover:scale-102 transition-all duration-300">
-                <span className="text-gray-300 font-medium">Looking for Deals</span>
-              </div>
-            </AnimatedDiv>
+          <div className="w-full h-[50vh] md:h-[60vh] lg:h-[70vh] mx-auto">
+            <LottiePlayer src="https://cdn.lottielab.com/l/8D56532nDeNWaX.json" />
           </div>
         </div>
       </div>
 
       {/* Additional Enhanced Features Section */}
-      <div className="py-32 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="pt-4 md:pt-[10rem] lg:pt-[20rem] xl:pt-[30rem] pb-32 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedDiv className="text-center mb-20">
             <div className="max-w-8xl mx-auto text-center">
