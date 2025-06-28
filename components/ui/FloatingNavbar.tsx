@@ -95,13 +95,15 @@ export const FloatingNav = ({
               href="/"
               className="flex items-center justify-center w-16 h-16 rounded-full border border-white/10 shadow-lg backdrop-blur-md bg-black/80 hover:bg-white/5 transition-all duration-200 flex-shrink-0 hover:scale-105"
             >
-              <Image
-                src="/pflogod.webp"
-                alt="Pocket Fund Logo"
-                width={40}
-                height={40}
-                className="h-10 w-10"
-              />
+              <div className="h-10 w-10 rounded-full overflow-hidden flex items-center justify-center ">
+                <Image
+                  src="/pflogobg.webp"
+                  alt="Pocket Fund Logos"
+                  width={40}
+                  height={40}
+                  className="object-contain h-10 w-10"
+                />
+              </div>
             </Link>
 
             {/* Right Navigation Items */}

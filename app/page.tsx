@@ -23,21 +23,21 @@ const Home = () => {
         <Horizontal />
       </div>
 
-      <Grid />
-     
-
-     
+      <div id="grid">
+        <Grid />
+      </div>
 
       {/* Main content sections */}
       <div className="relative">
-       
-       
-        <TimelineDemo />
-        <RecentProjects />
-        <Clients />
-
-      
-      
+        <div id="timeline">
+          <TimelineDemo />
+        </div>
+        <div id="recentprojects">
+          <RecentProjects />
+        </div>
+        <div id="testimonial">
+          <Clients />
+        </div>
         <Footer />
       </div>
     </main>

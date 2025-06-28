@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ArrowRight, Target, TrendingUp, Users, Award, Briefcase, Play, DollarSign } from "lucide-react";
+import { ArrowRight, Target, TrendingUp, Users, Award, Briefcase, Play, DollarSign, Search, FileText, Handshake, UserCheck, BarChart3 } from "lucide-react";
 import Image from "next/image";
 import LottiePlayer from "./ui/LottiePlayer";
 
@@ -312,7 +312,7 @@ const Hero = () => {
                     className={`block text-xl md:text-3xl lg:text-4xl mt-2 font-normal text-white/80 transition-all duration-600 ${isVisible ? "opacity-100" : "opacity-0"
                       }`}
                   >
-                    Transforms Businesses Into
+                    Transforms Aquisitions Into
                   </span>
 
                   <div
@@ -320,10 +320,10 @@ const Hero = () => {
                       }`}
                   >
                     <ContainerTextFlip
-                      words={["Smart Investments", "Growing Assets", "Success Stories", "Market Leaders"]}
+                      words={["Smart Investments", "Growing Assets", "Market Leaders", "Success Stories"]}
                       interval={1400}
                       animationDuration={300}
-                      className="bg-black rounded-xl px-8 py-4 shadow-2xl border border-white/20 backdrop-blur-sm"
+                      className="bg-blue-900/30 backdrop-blur-sm border border-blue-400/30 rounded-xl px-8 py-4 shadow-2xl"
                     />
                   </div>
                 </h1>
@@ -335,10 +335,11 @@ const Hero = () => {
                   }`}
               >
                 <p className="text-lg text-white/80 font-medium">
-                  Bridge the gap between ambitious buyers and quality deals with expert-guided acquisition services
+                  Pocket Fund bridges the gap between ambitious buyers and quality deals
                 </p>
                 <p className="text-base text-white/60">
-                  Complete deal sourcing, due diligence, and transaction support from start to close
+                  End-to-end acquisition advisory for digital businesses under $10M. From sourcing and diligence to post-acquisition scale.<br />
+                  Complete end to end acquisition support.
                 </p>
               </div>
 
@@ -369,25 +370,16 @@ const Hero = () => {
       </div>
 
       {/* Deal Matching Section with Enhanced Flow Lines */}
-      <div className="py-32 pt-16 bg-slate-900 w-full">
-        <div className="w-full px-6">
-          <AnimatedDiv className="text-center mb-20" delay={0}>
-            <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-white">
-              How We Connect
-            </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-              Our platform matches the right businesses with the right buyers through verified profiles and smart criteria.
-            </p>
-          </AnimatedDiv>
-
-          <div className="w-full h-[50vh] md:h-[60vh] lg:h-[70vh] mx-auto">
-            <LottiePlayer src="https://cdn.lottielab.com/l/8D56532nDeNWaX.json" />
+      <div className="py-4 bg-white w-full relative z-20">
+        <div className="w-full px-2 flex flex-col items-center">
+          <div className="w-full max-w-5xl mx-auto rounded-2xl shadow-lg bg-white flex items-center justify-center" style={{ minHeight: '180px', padding: '1rem 0' }}>
+            <LottiePlayer src="https://cdn.lottielab.com/l/5Gn1jXUt1kSREm.json" />
           </div>
         </div>
       </div>
 
-      {/* Additional Enhanced Features Section */}
-      <div className="pt-4 md:pt-[10rem] lg:pt-[20rem] xl:pt-[30rem] pb-32 bg-gradient-to-b from-slate-900 to-slate-800">
+      {/* 5 Core Services Section */}
+      <div className="pt-8 md:pt-20 lg:pt-32 xl:pt-48 pb-32 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedDiv className="text-center mb-20">
             <div className="max-w-8xl mx-auto text-center">
@@ -397,57 +389,70 @@ const Hero = () => {
               </div>
 
               <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16">
-                We&#39;re on a mission to{' '}
-                <span className="text-white font-semibold">democratize online business acquisitions</span>{' '}
-                and empower a new generation of digital entrepreneurs through hands-on ownership, transparency, and operational excellence.
+                We help serious buyers acquire high-potential online businesses under $10M with full-service support.
               </p>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
-              Why Choose Pocket Fund?
+              5 Core Services
             </h2>
             <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-              We make business acquisition simple for everyone involved.
+              End-to-end acquisition support from deal sourcing to exit preparation.
             </p>
           </AnimatedDiv>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: "M13 10V3L4 14h7v7l9-11h-7z",
-                title: "Lightning Fast",
-                description: "Complete deals in weeks, not months"
+                icon: Search,
+                title: "Deal Sourcing",
+                description: "Off-market focus with exclusive deal flow and proprietary networks"
               },
               {
-                icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
-                title: "Verified Quality",
-                description: "Every business and buyer is thoroughly vetted"
+                icon: FileText,
+                title: "Due Diligence",
+                description: "Technical, financial, and operational analysis with comprehensive risk assessment"
               },
               {
-                icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1",
-                title: "Fair Pricing",
-                description: "Transparent fees with no hidden costs"
+                icon: Handshake,
+                title: "Deal Structuring & Negotiation",
+                description: "Optimal terms negotiation and transaction structure optimization"
+              },
+              {
+                icon: UserCheck,
+                title: "Transition + Operator Placement",
+                description: "Seamless handover with vetted operator matching and integration support"
+              },
+              {
+                icon: BarChart3,
+                title: "Growth Playbooks + Exit Prep",
+                description: "Strategic growth roadmaps and exit strategy preparation for maximum value"
               }
-            ].map((feature, index) => (
+            ].map((service, index) => (
               <AnimatedDiv
                 key={index}
-                className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-10 text-center hover:border-blue-500/50 transition-all duration-500 group hover:scale-105 ${hoveredFeature === index ? 'shadow-2xl shadow-blue-500/25' : ''}`}
-                delay={index * 200}
+                className={`bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 text-center hover:border-blue-500/50 transition-all duration-500 group hover:scale-105 ${hoveredFeature === index ? 'shadow-2xl shadow-blue-500/25' : ''} ${index === 4 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''}`}
+                delay={index * 150}
                 from="opacity-0 translate-y-12"
                 to="opacity-100 translate-y-0"
               >
-                <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8 hover:scale-110 hover:rotate-3 transition-transform duration-300" onMouseEnter={() => setHoveredFeature(index)} onMouseLeave={() => setHoveredFeature(null)}>
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
-                  </svg>
+                <div
+                  className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6 hover:scale-110 hover:rotate-3 transition-transform duration-300"
+                  onMouseEnter={() => setHoveredFeature(index)}
+                  onMouseLeave={() => setHoveredFeature(null)}
+                >
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-6">{feature.title}</h3>
-                <p className="text-gray-400 leading-relaxed text-base">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-400 leading-relaxed text-sm">{service.description}</p>
               </AnimatedDiv>
             ))}
           </div>
         </div>
       </div>
+
+
+
     </div>
   );
 };

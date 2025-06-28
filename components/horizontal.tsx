@@ -65,36 +65,7 @@ const businessTypes = [
         priceRange: "Under $75k",
         targetMRR: "$1k - $8k"
     },
-    {
-        id: 5,
-        number: "05",
-        title: "Digital Services",
-        description: "Specialized service platforms",
-        icon: Target,
-        highlights: [
-            "Design marketplaces",
-            "Freelancer platforms",
-            "Course platforms",
-            "Booking systems"
-        ],
-        priceRange: "Under $40k",
-        targetMRR: "$300 - $4k"
-    },
-    {
-        id: 6,
-        number: "06",
-        title: "Data & Analytics",
-        description: "Information and insights platforms",
-        icon: TrendingUp,
-        highlights: [
-            "Market research tools",
-            "Data aggregation services",
-            "Analytics dashboards",
-            "Industry reports"
-        ],
-        priceRange: "Under $60k",
-        targetMRR: "$400 - $6k"
-    },
+    
     {
         id: 7,
         number: "07",
