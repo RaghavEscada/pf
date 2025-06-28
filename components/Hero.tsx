@@ -118,7 +118,7 @@ const LogoMarquee = ({ logos, direction = "left", speed = 25 }: { logos: any[], 
                 key={logoIndex}
                 className="flex items-center justify-center h-10 w-28 rounded-lg px-3 py-1.5 hover:scale-105 hover:-translate-y-1 transition-all duration-200"
               >
-                <img
+                <Image
                   src={logo.url}
                   alt={`${logo.name} logo`}
                   className="h-6 w-auto max-w-20 object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"

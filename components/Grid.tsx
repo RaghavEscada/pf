@@ -228,31 +228,138 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div className="py-24 px-6 md:px-12 lg:px-16 xl:px-24 bg-gradient-to-br from-blue-950 via-slate-900 to-blue-900 relative">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-14 text-center drop-shadow-lg tracking-tight">Meet the Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Enhanced Team Section */}
+        <div className="py-32 px-6 md:px-12 lg:px-16 xl:px-24 bg-gradient-to-br from-slate-950 via-blue-950/30 to-slate-900 relative overflow-hidden">
+          {/* Background Effects */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-80 h-80 bg-purple-500/8 rounded-full blur-3xl animate-[pulse_6s_ease-in-out_infinite]"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-400/5 rounded-full blur-3xl"></div>
+          </div>
+
+          {/* Animated Grid Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px] animate-[moveGrid_20s_linear_infinite]"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center bg-blue-500/10 backdrop-blur-md border border-blue-500/20 rounded-full px-8 py-4 mb-8 shadow-lg">
+                <Users className="w-6 h-6 text-blue-400 mr-3" />
+                <span className="text-sm font-semibold text-blue-300 tracking-wide">THE TEAM</span>
+              </div>
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
+                Meet the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500">Visionaries</span>
+              </h2>
+              <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+                The brilliant minds transforming micro acquisitions into extraordinary success stories
+              </p>
+            </div>
+
+            {/* Team Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
               {/* Dev Shah */}
-              <div className="relative bg-gradient-to-br from-blue-800/80 via-slate-900/90 to-blue-900/80 rounded-3xl p-10 shadow-2xl flex flex-col items-center border-2 border-blue-700/30 hover:border-blue-400/60 transition-all duration-300 group">
-                <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-3xl font-bold text-white mb-6 shadow-lg border-4 border-blue-400/40 group-hover:scale-105 group-hover:border-blue-300 transition-all duration-300">DS</div>
-                <h3 className="text-2xl font-bold text-blue-300 mb-3 text-center">Dev Shah</h3>
-                <div className="text-blue-400 font-semibold mb-2 text-center">Founder & Investment Lead</div>
-                <p className="text-gray-200 text-base text-center leading-relaxed">Dev is the force behind every smart acquisition at Pocket Fund. He pulls the levers on investment strategy, runs point on deal negotiations, and has a sixth sense for spotting undervalued digital assets. Equal parts operator and visionary, Dev turns bold ideas into bankable businesses.</p>
+              <div className="group relative">
+                {/* Floating background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-blue-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-110"></div>
+
+                <div className="relative bg-gradient-to-br from-slate-800/90 via-slate-900/95 to-blue-900/90 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 lg:p-10 shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 group-hover:scale-105 group-hover:border-blue-500/30 overflow-hidden">
+                  {/* Inner glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  {/* Avatar */}
+                  <div className="relative z-10 flex flex-col items-center">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-3xl font-bold text-white mb-6 shadow-2xl border-4 border-blue-400/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+                      <span className="relative z-10">DS</span>
+                    </div>
+
+                    {/* Name and Title */}
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2 text-center group-hover:text-blue-300 transition-colors duration-300">Dev Shah</h3>
+                    <div className="text-blue-400 font-semibold text-lg mb-1 text-center">Founder & Investment Lead</div>
+                    <div className="h-1 w-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-6 group-hover:w-24 transition-all duration-500"></div>
+
+                    {/* Description */}
+                    <p className="text-gray-300 text-base text-center leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                      Dev is the force behind every smart acquisition at Pocket Fund. He pulls the levers on investment strategy, runs point on deal negotiations, and has a sixth sense for spotting undervalued digital assets. Equal parts operator and visionary, Dev turns bold ideas into bankable businesses.
+                    </p>
+
+                    {/* Floating particles effect */}
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
+                    <div className="absolute bottom-6 left-6 w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200 animate-pulse"></div>
+                  </div>
+                </div>
               </div>
+
               {/* Aniket Gupta */}
-              <div className="relative bg-gradient-to-br from-blue-800/80 via-slate-900/90 to-blue-900/80 rounded-3xl p-10 shadow-2xl flex flex-col items-center border-2 border-blue-700/30 hover:border-blue-400/60 transition-all duration-300 group">
-                <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-3xl font-bold text-white mb-6 shadow-lg border-4 border-blue-400/40 group-hover:scale-105 group-hover:border-blue-300 transition-all duration-300">AG</div>
-                <h3 className="text-2xl font-bold text-blue-300 mb-3 text-center">Aniket Gupta</h3>
-                <div className="text-blue-400 font-semibold mb-2 text-center">COO & Chief Analyst</div>
-                <p className="text-gray-200 text-base text-center leading-relaxed">Aniket is the nerve center of Pocket Fund — managing operations, leading analysis, and keeping the entire machine running smooth. He breaks down messy businesses, finds hidden upside, and ensures every acquisition runs on rails. If Dev dreams it, Aniket makes it real (and scalable).</p>
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-blue-500/10 to-purple-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-110"></div>
+
+                <div className="relative bg-gradient-to-br from-slate-800/90 via-slate-900/95 to-purple-900/90 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 lg:p-10 shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 group-hover:scale-105 group-hover:border-purple-500/30 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10 flex flex-col items-center">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-3xl font-bold text-white mb-6 shadow-2xl border-4 border-purple-400/30 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+                      <span className="relative z-10">AG</span>
+                    </div>
+
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2 text-center group-hover:text-purple-300 transition-colors duration-300">Aniket Gupta</h3>
+                    <div className="text-purple-400 font-semibold text-lg mb-1 text-center">COO & Chief Analyst</div>
+                    <div className="h-1 w-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6 group-hover:w-24 transition-all duration-500"></div>
+
+                    <p className="text-gray-300 text-base text-center leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                      Aniket is the nerve center of Pocket Fund — managing operations, leading analysis, and keeping the entire machine running smooth. He breaks down messy businesses, finds hidden upside, and ensures every acquisition runs on rails. If Dev dreams it, Aniket makes it real (and scalable).
+                    </p>
+
+                    <div className="absolute top-4 left-4 w-2 h-2 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
+                    <div className="absolute bottom-6 right-6 w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200 animate-pulse"></div>
+                  </div>
+                </div>
               </div>
+
               {/* Adarsh Ranjan */}
-              <div className="relative bg-gradient-to-br from-blue-800/80 via-slate-900/90 to-blue-900/80 rounded-3xl p-10 shadow-2xl flex flex-col items-center border-2 border-blue-700/30 hover:border-blue-400/60 transition-all duration-300 group">
-                <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-3xl font-bold text-white mb-6 shadow-lg border-4 border-blue-400/40 group-hover:scale-105 group-hover:border-blue-300 transition-all duration-300">AR</div>
-                <h3 className="text-2xl font-bold text-blue-300 mb-3 text-center">Adarsh Ranjan</h3>
-                <div className="text-blue-400 font-semibold mb-2 text-center">Analyst & Sales Lead</div>
-                <p className="text-gray-200 text-base text-center leading-relaxed">Adarsh brings structure to chaos. From diving into financials to mapping out buyer personas, he's the one turning raw data into sharp insights. With a sharp mind and a steady hand, Adarsh helps power the decisions that move deals forward.</p>
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 via-blue-500/10 to-green-600/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-110"></div>
+
+                <div className="relative bg-gradient-to-br from-slate-800/90 via-slate-900/95 to-green-900/90 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 lg:p-10 shadow-2xl hover:shadow-green-500/10 transition-all duration-500 group-hover:scale-105 group-hover:border-green-500/30 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative z-10 flex flex-col items-center">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-3xl font-bold text-white mb-6 shadow-2xl border-4 border-green-400/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
+                      <span className="relative z-10">AR</span>
+                    </div>
+
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2 text-center group-hover:text-green-300 transition-colors duration-300">Adarsh Ranjan</h3>
+                    <div className="text-green-400 font-semibold text-lg mb-1 text-center">Analyst & Sales Lead</div>
+                    <div className="h-1 w-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mb-6 group-hover:w-24 transition-all duration-500"></div>
+
+                    <p className="text-gray-300 text-base text-center leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                      Adarsh brings structure to chaos. From diving into financials to mapping out buyer personas, he is the one turning raw data into sharp insights. With a sharp mind and a steady hand, Adarsh helps power the decisions that move deals forward.
+                    </p>
+
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-green-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse"></div>
+                    <div className="absolute bottom-6 left-6 w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 delay-200 animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Team Stats */}
+            <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center group">
+                <div className="text-4xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform duration-300">3</div>
+                <div className="text-gray-300 font-medium">Core Team Members</div>
+              </div>
+              <div className="text-center group">
+                <div className="text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">2+</div>
+                <div className="text-gray-300 font-medium">Years Experience</div>
+              </div>
+              <div className="text-center group">
+                <div className="text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">∞</div>
+                <div className="text-gray-300 font-medium">Passion & Drive</div>
               </div>
             </div>
           </div>
@@ -493,7 +600,7 @@ const About = () => {
         </div>
       </div>
 
-      
+
       {/* Key Metrics Section */}
       <div className="py-20 px-6 md:px-12 lg:px-16 xl:px-24 bg-gradient-to-b from-gray-900/50 to-gray-900/30">
         <div className="max-w-8xl mx-auto">
@@ -637,6 +744,10 @@ const About = () => {
       </div>
 
       <style jsx>{`
+        @keyframes moveGrid {
+          0% { background-position: 0% 0%; }
+          100% { background-position: 50px 50px; }
+        }
         @keyframes slideUp {
           from {
             opacity: 0;
